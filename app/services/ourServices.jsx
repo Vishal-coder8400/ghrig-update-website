@@ -13,7 +13,6 @@ import {
 } from "react-icons/fi";
 
 const services = [
-  // ... your 6 services (same as before)
   {
     icon: <FiUser size={22} />,
     title: "Permanent Staffing",
@@ -74,17 +73,17 @@ Pls feel free to connect with us to get the best of market solution`,
 ];
 
 const OurServices = () => {
-  // Control expansion per row (0 = first row, 1 = second row)
-  const [expandedRow, setExpandedRow] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(null);
 
-  const toggleRow = (rowIndex) => {
-    setExpandedRow(expandedRow === rowIndex ? null : rowIndex);
+  const toggleCard = (index) => {
+    setExpandedCard(expandedCard === index ? null : index);
   };
 
   return (
     <section className="bg-[#F5F1FF] py-16 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        
+        {/* HEADER */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#141414]">
             Our Services
@@ -97,26 +96,26 @@ const OurServices = () => {
           </p>
         </div>
 
-        {/* First Row (0,1,2) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+        {/* ROW 1 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
           {services.slice(0, 3).map((service, index) => (
             <ServiceCard
               key={index}
               service={service}
-              isExpanded={expandedRow === 0}
-              onToggle={() => toggleRow(0)}
+              isExpanded={expandedCard === index}
+              onToggle={() => toggleCard(index)}
             />
           ))}
         </div>
 
-        {/* Second Row (3,4,5) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {/* ROW 2 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start mt-10">
           {services.slice(3, 6).map((service, index) => (
             <ServiceCard
               key={index + 3}
               service={service}
-              isExpanded={expandedRow === 1}
-              onToggle={() => toggleRow(1)}
+              isExpanded={expandedCard === index + 3}
+              onToggle={() => toggleCard(index + 3)}
             />
           ))}
         </div>
@@ -125,7 +124,6 @@ const OurServices = () => {
   );
 };
 
-// Reusable Card Component
 const ServiceCard = ({ service, isExpanded, onToggle }) => {
   return (
     <div
@@ -134,9 +132,8 @@ const ServiceCard = ({ service, isExpanded, onToggle }) => {
         flex flex-col border-2 border-transparent overflow-hidden
         ${isExpanded ? "border-[#9B5EFF] border-opacity-40 shadow-xl" : ""}
       `}
-      style={{ minHeight: "180px" }}
     >
-      {/* Header */}
+      {/* Card Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center gap-4">
           <div className="bg-[#F5E9FF] text-[#9B5EFF] p-3 rounded-full">
@@ -148,11 +145,11 @@ const ServiceCard = ({ service, isExpanded, onToggle }) => {
         </div>
       </div>
 
-      {/* Expandable Content */}
+      {/* Expandable content */}
       <div
         className={`
           overflow-hidden transition-all duration-700 ease-in-out
-          ${isExpanded ? "max-h-[900px] opacity-100" : "max-h-0 opacity-0"}
+          ${isExpanded ? "max-h-[1200px] opacity-100" : "max-h-0 opacity-0"}
         `}
       >
         <div className="px-6 pb-6">
@@ -166,23 +163,17 @@ const ServiceCard = ({ service, isExpanded, onToggle }) => {
         </div>
       </div>
 
-      {/* Read More Button */}
+      {/* Toggle button */}
       <div className="px-6 pb-6 mt-auto">
         <button
           onClick={onToggle}
-          className="w-full flex items-center justify-between text-sm font-medium text-[#9B5EFF] hover:text-[#7c3aed] transition-all group"
+          className="w-full flex items-center justify-between text-sm font-medium text-[#9B5EFF] hover:text-[#7c3aed] transition-all"
         >
           <span>{isExpanded ? "Read Less" : "Read More"}</span>
           {isExpanded ? (
-            <FiChevronUp
-              size={18}
-              className="transition-transform group-hover:scale-110"
-            />
+            <FiChevronUp size={18} />
           ) : (
-            <FiChevronDown
-              size={18}
-              className="transition-transform group-hover:scale-110"
-            />
+            <FiChevronDown size={18} />
           )}
         </button>
       </div>
