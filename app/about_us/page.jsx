@@ -1,9 +1,9 @@
 import React from 'react'
 // import Redefining from '../about_us/redefining'
 import Banner_Section from './banner_Section'
-import One_platform from './one_platform'
+// import One_platform from './one_platform'
 import Our_story from './our_story'
-import What_stand from './what_stand'
+// import What_stand from './what_stand'
 import { FaqSection } from '../home/faq'
 import BuiltForYou from './builtForYou'
 import VisionMission from './VisionMission'
@@ -17,7 +17,7 @@ export default function page() {
        <Our_story/>
        {/* <One_platform/> */}
        <BuiltForYou/>
-       <What_stand/>
+       {/* <What_stand/> */}
        <FaqSection/>
   
     </div>

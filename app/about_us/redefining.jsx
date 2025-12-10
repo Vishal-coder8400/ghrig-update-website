@@ -18,7 +18,7 @@ export default function redefining() {
             operating system for talent.
           </p>
           <div className="flex justify-center mt-8 gap-2">
-            <button className="text-[15px] text-white px-5 rounded-4xl py-3 font-semibold font_family_display bg-radial-[at_50%_75%] from-[#8E77E4] via-[#6945ed] to-[#6945ED] to-90%">
+            <button className="text-[15px] text-white px-5 rounded-4xl py-3 font-semibold font_family_display bg-radial-[at_50%_75%] bg-[#5D1E90] text-white to-90%">
               Join the Movement
             </button>
             <button className="text-[15px] border-1 border-t-[#8E77E4] border-b-white px-5 rounded-4xl py-3 text-black font-semibold font_family_display bg-white ">

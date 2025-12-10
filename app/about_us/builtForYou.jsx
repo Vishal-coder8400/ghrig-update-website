@@ -87,12 +87,12 @@ const BuiltForYou = () => {
               {/* Proceed Button */}
               <a
                 href="#"
-                className="flex items-center justify-center md:justify-start gap-2 bg-[#6945ED] text-white px-6 py-2.5 rounded-full font-medium mt-4 hover:shadow-lg transition-all duration-300 group"
+                className="flex items-center justify-center md:justify-start gap-2 bg-[#5D1E90] text-white px-6 py-2.5 rounded-full font-medium mt-4 hover:shadow-lg transition-all duration-300 group"
               >
                 Proceed
                 <ChevronRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
-            </CardContent>
+            </CardContent>  
           </Card>
         ))}
       </div>

@@ -27,7 +27,7 @@ export default function VisionMission() {
         <div className="
           absolute bottom-0 left-0 w-full 
           h-[70px] 
-          bg-[#6945ED]
+          bg-[#5D1E90]
           rounded-b-[30px]
           translate-y-3
         " />
@@ -81,7 +81,7 @@ export default function VisionMission() {
               <div className="
                 absolute bottom-0 left-0 w-full 
                 h-[70px] 
-                bg-[#6945ED]
+                bg-[#5D1E90]
                 rounded-b-[30px]
                 translate-y-3
               " />
