@@ -15,7 +15,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.548.0",
-    "next": "16.0.0",
+    "next": "canary",
     "nodemailer": "^7.0.10",
     "pdfkit": "^0.17.2",
     "postcss": "^8.5.6",
