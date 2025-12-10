@@ -5,7 +5,10 @@ import { Button } from "../../components/ui/button";
 const jobCategories = [
   ["Pharma", "Edutech"],
   ["E Commerce", "Travel"],
-  ["Hospitality", ],
+  ["Hospitality"," Financial Services" ],
+  ["Banking","IT" ],
+  ["Insaurance","Housing" ],
+  ["FMCG" ],
 ];
 
 export const DiscoverJobCategories = () => {

@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 
 const carouselData = [
   {
-    title: "Background Verification",
-    subtitle: "Employment and education checks",
-  },
-  {
     title: "Employee  Benefits",
     subtitle: "Group Mediclaim, Group Term plan at best market rates",
   },
@@ -40,11 +36,11 @@ const ServiceBanner = () => {
   }, []);
 
   return (
-    <section className="service-banner  mx-auto px-4 sm:px-6 lg:px-1 py-12 lg:pb-0 lg:py-20 bg-white flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+    <section className="service-banner  mx-auto px-4 sm:px-6 lg:px-1 py-12 lg:pb-0 lg:py-10 bg-white flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
       
       {/* LEFT SIDE */}
       <div className="flex justify-center">
-      <div className="service-left max-w-xl flex-col flex justify-center  w-full lg:pl-48 text-center lg:text-left">
+      <div className="service-left max-w-xl flex-col flex justify-center  w-full lg:pl-30 text-center lg:text-left">
      <div className="flex justify-center">
         <p className="inline-block w-[50%]   px-3 py-1 text-sm text-center font-medium text-purple-700 bg-purple-100 rounded-full mb-4 font_family_jakarta">
           gHRig People Solutions
@@ -61,12 +57,7 @@ const ServiceBanner = () => {
         </p>
 
         <div className="flex flex-wrap justify-center lg:justify-center gap-3 mb-10">
-          <button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors font_family_inter">
-            Hire Now
-          </button>
-          <button className="px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium rounded-lg transition-colors font_family_inter">
-            Explore Roles
-          </button>
+        
         </div>
 
         {/* ◼◼ DOTS — CLICK TO CHANGE SLIDE */}
